@@ -1,0 +1,143 @@
+body{
+    color:yellow;
+    background-color: #5680E9;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 10px;
+   
+    
+   
+
+}
+
+
+
+
+.parent{
+    display:grid;
+    grid-template-columns: 2px 1fr 1fr 2px ;
+    grid-template-rows: 160px 980px 20px;
+    height: 1000px;
+    grid-template-areas:
+    ".header nav."
+    ".main aside."
+    ".footer footer."
+    ;
+}
+
+header, nav, main, aside, footer{
+    margin: 10px
+
+}
+
+a{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+    padding: 10px;
+    }
+
+a:hover{
+    color: brown;
+}
+
+header{
+   background-color: #5680E9 ;
+    grid-area: header;
+}
+nav{
+    background-color:  #5680E9;
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+
+}
+main{
+    background-color:  #5680E9;
+    grid-area: main;
+
+}
+aside{
+    background-color:  #5680E9;
+    grid-area: aside;
+
+}
+
+.listing{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.list li{
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #8860D0;
+    list-style: none;
+}
+
+footer{
+    background-color:  #5680E9;
+    grid-area: footer;
+    border: honeydew dashed 2px;
+    display: flex;
+    justify-content: center;
+
+}
+.ab{
+    border:#8860D0 solid 2px;
+
+}
+.ac{
+    border: #8860D0 dashed 2px;
+}
+
+.fh{
+    color:yellow;
+    border: #8860D0 dotted 10px; 
+}
+
+.video{
+    position: relative;
+    padding-bottom: 10%; 
+    padding-top: 100px;
+    height: 0;
+
+}
+
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (min-width: 1024px){
+    .parent{
+        grid-template-columns: 10px 1fr 1fr 10px ;
+        grid-template-rows: 70px 40px 550px 300px 50px;
+        grid-template-areas:
+        ".header header."
+        ".nav nav."
+        ".main main."
+        ".aside aside."
+        ".footer footer."
+        ;
+
+    }
+
+    a{ 
+        display: inline;
+    }
+}
